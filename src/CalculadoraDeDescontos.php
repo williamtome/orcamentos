@@ -15,9 +15,7 @@ class CalculadoraDeDescontos
         // Chain of Responsability
         $cadeiaDeDescontos = new DescontoParaMaisDe5Itens(
             new DescontoParaMaisDe500Reais(
-                new DescontoParaMaisDe1000Reais(
-                    new SemDesconto()
-                )
+                new SemDesconto()
             )
         );
 
