@@ -31,3 +31,7 @@ No momento, estou estudando os padrões comportamentais:
     - Cada orçamento receberá descontos extras, porém só será aplicado dependendo de qual estado o orçamento está atualmente.
     - Se o estado do orçamento estiver em aprovação, aplicará 5% de desconto.
     - Se o orçamento for aprovado, aplicará mais 2% de desconto.
+
+* Command
+  * Regra de negócio:
+    - Após o orçamento ser aprovado, é necessário gerar um pedido. Esse pedido é criado e persistido no banco de dados; só que também deve enviar um e-ail para o cliente informando que o pedido dele foi criado com sucesso.
