@@ -8,7 +8,7 @@ use William\DesignPattern\Orcamento\Estados\EmAprovacao;
 class Orcamento
 {
     public int $quantidadeDeItens;
-    public float $valor;
+    private float $valor;
     public EstadoOrcamento $estadoAtual;
 
     public function __construct()
