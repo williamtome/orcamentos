@@ -25,3 +25,7 @@ No momento, estou estudando os padrões comportamentais:
     - Existem certos impostos que possuem mais de uma porcentagem para ser aplicada ao orçamento de acordo com o valor total.
       - Imposto Cofins: Taxa máxima é de 7,6%, taxa mínima é de 3%.
       - Imposto Csll: Taxa máxima é de 15%, taxa mínima é de 9%.
+
+* State
+  * Regra de negócio:
+    - Cada orçamento receberá descontos extras, porém só será aplicado dependendo de qual estado o orçamento está atualmente.
