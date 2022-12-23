@@ -29,3 +29,5 @@ No momento, estou estudando os padrões comportamentais:
 * State
   * Regra de negócio:
     - Cada orçamento receberá descontos extras, porém só será aplicado dependendo de qual estado o orçamento está atualmente.
+    - Se o estado do orçamento estiver em aprovação, aplicará 5% de desconto.
+    - Se o orçamento for aprovado, aplicará mais 2% de desconto.
