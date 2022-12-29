@@ -3,11 +3,21 @@
 namespace William\DesignPattern;
 
 use DateTimeImmutable;
+use SplObserver;
+use William\DesignPattern\Pedidos\Acoes\AcaoAposGerarPedido;
 
 class GeraPedidoHandler
 {
+    /** @var AcaoAposGerarPedido[] */
+    private array $acoesAposGerarPedido = [];
+
     public function __construct(/* PedidoRepository, MailService */)
     {
+    }
+
+    public function adicionarAcoesParaGerarPedido(AcaoAposGerarPedido $acao)
+    {
+        $this->acoesAposGerarPedido[] = $acao;
     }
 
     public function execute(GeraPedido $geraPedido): void
@@ -21,9 +31,8 @@ class GeraPedidoHandler
         $pedido->nomeCliente = $geraPedido->getNomeCliente();
         $pedido->orcamento = $orcamento;
 
-        /* PedidoRepository */
-        echo 'Gerar pedido no banco de dados ' . PHP_EOL;
-        /* MailService */
-        echo 'Enviar e-mail para o cliente ' . PHP_EOL;
+        foreach ($this->acoesAposGerarPedido as $acao) {
+            $acao->execute($pedido);
+        }
     }
 }
