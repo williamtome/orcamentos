@@ -21,6 +21,11 @@ class Orcamento
         $this->valor = $valor;
     }
 
+    public function getValor(): float
+    {
+        return $this->valor;
+    }
+
     public function aplicarDescontoExtra(): void
     {
         $this->valor -= $this->estadoAtual->calculaDescontoExtra($this);
