@@ -2,6 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
+use William\DesignPattern\ListaDeOrcamentos;
 use William\DesignPattern\Orcamento;
 
 $orcamento1 = new Orcamento();
@@ -20,11 +21,10 @@ $orcamento3->quantidadeDeItens = 5;
 $orcamento3->aprova();
 $orcamento3->finaliza();
 
-$listaOrcamentos = [
-    $orcamento1,
-    $orcamento2,
-    $orcamento3,
-];
+$listaOrcamentos = new ListaDeOrcamentos();
+$listaOrcamentos->adicionaOrcamento($orcamento1);
+$listaOrcamentos->adicionaOrcamento($orcamento2);
+$listaOrcamentos->adicionaOrcamento($orcamento3);
 
 foreach ($listaOrcamentos as $orcamento) {
     echo 'Valor: R$ ' . $orcamento->getValor() . PHP_EOL;
