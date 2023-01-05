@@ -34,4 +34,16 @@ No momento, estou estudando os padrões comportamentais:
 
 * Command
   * Regra de negócio:
-    - Após o orçamento ser aprovado, é necessário gerar um pedido. Esse pedido é criado e persistido no banco de dados; só que também deve enviar um e-ail para o cliente informando que o pedido dele foi criado com sucesso.
+    - Após o orçamento ser aprovado, é necessário gerar um pedido. Esse pedido é criado e persistido no banco de dados; só que também deve enviar um e-ail para o cliente informando que o pedido dele foi criado com sucesso e tamb´em deve gerar um log, registrando o pedido gerado.
+
+* Observer
+  * Regra de negócio:
+    - No padrão Command, vimos que são realizadas as ações de persistencia no banco de dados, geração de log e envio de e-mail. Estas ações podem abstraídas em objetos que poderão ser adicionados ao comando para que quando o pedido for gerado, esses objetos executem estas ações. Dessa forma, deixamos a responsabilidade de execução das regras de negócio com suas respectivas ações e evitamos com que o código do comando cresca.
+
+* Iterator
+  * Regra de negócio:
+    - listaremos todos os orçamentos (aprovados, reprovados, em aprovação e finalizados) mas também queremos que estes orçamentos possam ser filtrados de acordo com o estado atual. Com o padrão Iterator se torna possível fazer isso.
+
+* Adapter
+  * Regra de negócio:
+    - Agora, queremos registrar o orçamento em uma API externa via requisição HTTP. Isso pode ser feito de várias formas, porém para que a aplicação possa ter flexibilidade para alterar o uso de uma API para a outra, o padrão Adapter se encaixa perfeitamente neste caso.
