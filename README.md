@@ -9,7 +9,7 @@ Este repositório foi criado com o intuito de construir um sistema de geração 
 
 ## Desing patterns aplicados
 
-No momento, estou estudando os padrões comportamentais:
+### Padrões comportamentais
 
 * Strategy
   * Regra de negócio que este padrão resolve:
@@ -43,6 +43,8 @@ No momento, estou estudando os padrões comportamentais:
 * Iterator
   * Regra de negócio:
     - listaremos todos os orçamentos (aprovados, reprovados, em aprovação e finalizados) mas também queremos que estes orçamentos possam ser filtrados de acordo com o estado atual. Com o padrão Iterator se torna possível fazer isso.
+
+### Padrões criacionais
 
 * Adapter
   * Regra de negócio:
