@@ -7,7 +7,7 @@ use William\DesignPattern\Impostos\Csll;
 use William\DesignPattern\Impostos\Icms;
 use William\DesignPattern\Orcamento;
 
-require_once 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $calculadora = new CalculadoraDeImpostos();
 $orcamento = new Orcamento();
