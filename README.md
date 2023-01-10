@@ -49,3 +49,7 @@ Este repositório foi criado com o intuito de construir um sistema de geração 
 * Adapter
   * Regra de negócio:
     - Agora, queremos registrar o orçamento em uma API externa via requisição HTTP. Isso pode ser feito de várias formas, porém para que a aplicação possa ter flexibilidade para alterar o uso de uma API para a outra, o padrão Adapter se encaixa perfeitamente neste caso.
+
+* Bridge
+  * Regra de negócio:
+    - Precisamos exportar o orçamento e o pedido para aquivos XML e/ou ZIP. Para que essa funcionalidade seja de fácil escalabilidade e manutenibilidade, abstraimos em classes o conteúdo e o formato de arquivo que será exportado. O padrão Bridge nos atende nisso.
