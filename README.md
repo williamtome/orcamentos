@@ -44,7 +44,7 @@ Este repositório foi criado com o intuito de construir um sistema de geração 
   * Regra de negócio:
     - listaremos todos os orçamentos (aprovados, reprovados, em aprovação e finalizados) mas também queremos que estes orçamentos possam ser filtrados de acordo com o estado atual. Com o padrão Iterator se torna possível fazer isso.
 
-### Padrões criacionais
+### Padrões estruturais
 
 * Adapter
   * Regra de negócio:
